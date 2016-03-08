@@ -9,7 +9,7 @@ ODE Simulator
 
 ## Basic Usage
 
-Place a folder containing the info files for your system (see symToODE USAGE) in `data/`.
+Place a folder containing the info files for your system (see symToODE Usage) in `data/`.
 From `ode_simulator/` call
 
 	$ ./dataToFun.sh name
@@ -25,7 +25,7 @@ This is the simulator node for your system.
 * `_u` : The inputs topic (`std_msgs::Float64MultiArray`)
 
 #### Published Topics:
-* `x`  : The state vector (std_msgs::Float64MultiArray)
+* `x`  : The state vector (`std_msgs::Float64MultiArray`)
 
 
 ## quad2dof Tester
@@ -70,10 +70,10 @@ Where dataFolder is a folder containing the following files
             NOTE: For QUAD + ARM  created with the given Maxima algorithm,
             you should give the folowing parameters:
 
-                Quad: `Ix, Iy, Iz, m, g, la, b, d`
-                Arm : `mi, li, lcxi, lcyi, lczi, Ixxi, Iyyi, Izzi, Ixyi, Ixzi, Iyzi`
+                Quad: Ix, Iy, Iz, m, g, la, b, d
+                Arm : mi, li, lcxi, lcyi, lczi, Ixxi, Iyyi, Izzi, Ixyi, Ixzi, Iyzi
 
-            where `i = {1, ..., n}`, `n` the arm's dof.
+            where i = {1, ..., n}, n the arm's dof.
 
 * `X.txt` : The description of the state vector, as the states are used in `D`, `W`.
             eg.
