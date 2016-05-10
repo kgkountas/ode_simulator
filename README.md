@@ -12,22 +12,27 @@ ODE Simulator
 
 ## Basic Usage
 
-1. Create a file with the parameters of the UAV, seperated by commas:
+1. If you haven't done this before, build your workspace:
+
+ 		$ cd ~/catkin_ws/
+		$ catkin build
+		
+2. Create a file with the parameters of the UAV, seperated by commas:
 
 		mass,arm's length,g,Ixx,Iyy,Izz
 		
 	and save it as P_uav.txt
 
-2. Create a file with the parameters of the arm, one line per dof, seperated by commas:
+3. Create a file with the parameters of the arm, one line per dof, seperated by commas:
 
 		q,d,r,a,m,lcx,lcy,lcz,Ixx,Iyy,Izz,Ixy,Ixz,Iyz	
 	as D–H parameters(4 params),mass,center of mass(3 params),inertia matrix(6 params) respectively,
 	and save it as P_arm.txt
 
-3. Place a folder containing the info files for your system in `data/`.
+4. Place a folder containing the info files for your system in `ode_simulator/data/`.
 From `ode_simulator/` call
 
-	$ ./dataToFun.sh name
+		$ ./dataToFun.sh name
 
 where `name` is the previous folder name.
 
