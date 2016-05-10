@@ -18,9 +18,9 @@ ODE Simulator
 		
 	and save it as P_uav.txt
 
-2. Create a file with the parameters of the arm, seperated by commas:
+2. Create a file with the parameters of the arm, one line per dof, seperated by commas:
 
-		q,d,r,a,m,lcx,lcy,lcz,Ixx,Iyy,Izz,Ixy,Ixz,Iyz		for every dof of the arm
+		q,d,r,a,m,lcx,lcy,lcz,Ixx,Iyy,Izz,Ixy,Ixz,Iyz	
 	as D–H parameters(4 params),mass,center of mass(3 params),inertia matrix(6 params) respectively,
 	and save it as P_arm.txt
 
@@ -30,6 +30,7 @@ From `ode_simulator/` call
 	$ ./dataToFun.sh name
 
 where `name` is the previous folder name.
+
 On success `src/name` will be created with an ode function for your system.
 At the same time a target `name_node` will be added in `CMakeLists.txt`.
 This is the simulator node for your system.
