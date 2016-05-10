@@ -83,5 +83,5 @@ Calling
 will run the `quad2dof_node` and `test_quad2dof_node`, which implements a hovering controller.
 Also it lauches `rqt_plot` presenting the quad's x,y,z coordinates.
 
-	Superscript: X<sub>2</sub>，Subscript: O<sup>2</sup>
+
 
